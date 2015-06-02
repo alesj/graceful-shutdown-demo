@@ -19,6 +19,7 @@ public class GSDServlet extends HttpServlet {
         try {
             log(String.format("In process for %ssec ...", secs));
             Thread.sleep(secs * 1000);
+            log(String.format("Done [%s]", secs));
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             throw new IOException(e);
